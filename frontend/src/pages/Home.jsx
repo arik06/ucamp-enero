@@ -5,12 +5,16 @@ import heroImg from '../assets/images/hero-img01.jpg'
 import heroImg02 from '../assets/images/hero-img02.jpg'
 import heroVideo from '../assets/images/hero-video.mp4'
 import worldImg from '../assets/images/world.png'
+import experienceImg from'../assets/images/experience.png'
+
 import Subtitle from './../shared/Subtitle'
 
 
 import SearchBar from '../shared/SearchBar';
 import ServiceList from '../services/ServiceList';
 import FeaturedTourList from '../components/Featured-tours/FeaturedTourList';
+import MasonryImagesGallery from '../components/Image-gallery/MasonImagesGallery';
+import Newsletter from '../shared/Newsletter';
 
 
 
@@ -76,6 +80,76 @@ const Home = () =>{
   </Row>
 </Container>
 {/* especial seccion tour final  */}
+{/*experiencia clientes inicio */}
+
+<section>
+<Container>
+
+
+  <Row>
+
+
+    <Col lg="6">
+      <div className="experience__content">
+        <Subtitle subtitle={'Experience'}/>
+
+        <h2>Lee nuestros comentarios <br/> para que podamos darte una idea</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere soluta, optio autem iure tempora quam, voluptas consequatur minus rem quae<br/>
+         quos debitis. Quisquam, odit qui! Atque dolore accusantium voluptas totam?</p>
+      </div>
+
+      <div className="counter__wrapper d-flex align-items-center gap-5">
+<div className="counter__box">
+  <span>12k+</span>
+  <h6>Estupendo viaje </h6>
+</div>
+<div className="counter__box">
+  <span>2k+</span>
+  <h6>Clientes Regulares </h6>
+</div>
+<div className="counter__box">
+  <span>15</span>
+  <h6>Años de experiencia</h6>
+</div>
+
+      </div>
+    </Col>
+    <Col lg='6'>
+     <div className="experience__img">
+      <img src={experienceImg} alt="" />
+      </div> 
+    </Col>
+  </Row>
+</Container>
+
+
+
+
+
+</section>
+{/*experiencia clientes final */}
+
+
+
+{/* seccion de galleria inicia */}
+<section>
+  <Container>
+  <Row>
+    <Col lg="12">
+      <Subtitle subtitle={'Gallery'}/>
+      <h2 className='gallery__title'> Visita nuestro tour en linea </h2>
+    </Col>
+    <Col lg="12">
+<MasonryImagesGallery/>
+    </Col>
+  </Row>
+  </Container>
+</section>
+
+{/*seccion de galleria termina  */}
+{/*suscripcion inicia */}
+<Newsletter/>
+{/*suscripcion termina */}
     </>
   )
 }
