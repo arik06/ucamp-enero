@@ -10,6 +10,7 @@ import Subtitle from './../shared/Subtitle'
 
 import SearchBar from '../shared/SearchBar';
 import ServiceList from '../services/ServiceList';
+import FeaturedTourList from '../components/Featured-tours/FeaturedTourList';
 
 
 
@@ -52,13 +53,29 @@ const Home = () =>{
     </section>
     {/* hero section start */}
 <section>
+  <Container>
+  <Row>
 <Col lg='5' style={{marginLeft: "6rem"}}>
   <h5 className="services__subtitle">Cuales son nuestros servicios?</h5>
   <h2 className='services_title'>Ofrecemos los mejores servicios </h2>
 </Col>
 <ServiceList/>
+</Row>
+</Container>
 </section>
 
+
+{/* especial seccion tour  */}
+<Container>
+  <Row>
+    <Col lg="12" className='mb-5'>
+      <Subtitle subtitle={'Explora '}/>
+      <h2 className='featured__tour-title'>Lo mejores tours que brindamos!</h2>
+    </Col>
+    <FeaturedTourList/>
+  </Row>
+</Container>
+{/* especial seccion tour final  */}
     </>
   )
 }
